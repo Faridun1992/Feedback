@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Factories;
+namespace App\Factory\Operations;
 
+use App\Factory\Common\FeedbackFactory;
 use App\Models\Feedback;
 
 class FeedbackDatabase implements FeedbackFactory

@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Factories;
+namespace App\Factory\Operations;
+
+use App\Factory\Common\FeedbackFactory;
 
 class FeedbackFile implements FeedbackFactory
 {
