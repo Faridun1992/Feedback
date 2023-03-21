@@ -11,11 +11,8 @@ class FeedbackController extends Controller
     public function __invoke(FeedbackRequest $request)
     {
 
-        $requestStorage = new FeedbackCreator('DB');
-        $requestStorage->create($request->validated());
-
-        $requestStorage = new FeedbackCreator('FILE');
-        $requestStorage->create($request->validated());
+        (new FeedbackCreator('DB'))->create($request->validated());
+        (new FeedbackCreator('FILE'))->create($request->validated());
 
         return response()->json([
             'message' => 'Заявка успешно отправлена'
